@@ -1,0 +1,27 @@
+/*C14*/SET SCHEMA PUBLIC
+drop table beverage if exists
+drop table blend if exists
+drop table hibernate_sequences if exists
+create table beverage (id bigint not null, name varchar(255), price float not null, primary key (id))
+create table blend (id bigint not null, name varchar(255), price float not null, primary key (id))
+create table hibernate_sequences ( sequence_name varchar(255),  sequence_next_hi_value integer )
+/*C12*/SET SCHEMA PUBLIC
+INSERT INTO HIBERNATE_SEQUENCES VALUES('base_entity',0)
+DELETE FROM HIBERNATE_SEQUENCES WHERE SEQUENCE_NAME='base_entity' AND SEQUENCE_NEXT_HI_VALUE=0
+INSERT INTO HIBERNATE_SEQUENCES VALUES('base_entity',1)
+COMMIT
+/*C13*/SET SCHEMA PUBLIC
+INSERT INTO BLEND VALUES(1,'Milk',2.0E0)
+COMMIT
+INSERT INTO BLEND VALUES(2,'Chocolate Syrup',5.0E0)
+COMMIT
+INSERT INTO BLEND VALUES(3,'Nut Syrup',3.0E0)
+COMMIT
+INSERT INTO BEVERAGE VALUES(4,'Filter Coffe',5.0E0)
+COMMIT
+INSERT INTO BEVERAGE VALUES(5,'Mocha',6.0E0)
+COMMIT
+INSERT INTO BEVERAGE VALUES(6,'Latte',5.0E0)
+COMMIT
+INSERT INTO BEVERAGE VALUES(7,'Tea',3.0E0)
+COMMIT

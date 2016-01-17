@@ -1,0 +1,105 @@
+<!doctype html>
+<html ng-app="myApp">
+<head>
+<meta charset="utf-8" />
+<title>Mehmet Efendi</title>
+<link rel="stylesheet" href="webjars/bootstrap/3.2.0/css/bootstrap.css" />
+<link rel="stylesheet"
+	href="webjars/font-awesome/4.1.0/css/font-awesome.css" />
+<link rel="stylesheet" href="css/styles.css" />
+
+<script src="webjars/jquery/1.11.1/jquery.js"></script>
+<script src="webjars/bootstrap/3.2.0/js/bootstrap.js"></script>
+<script src="webjars/angularjs/1.2.19/angular.js"></script>
+<script src="webjars/angularjs/1.2.19/angular-route.js"></script>
+<script src="webjars/angularjs/1.2.19/angular-resource.js"></script>
+<script src="webjars/angular-ui-router/0.2.10/angular-ui-router.js"></script>
+
+<script src="js/app.js"></script>
+<script src="js/controllers.js"></script>
+
+</head>
+<body>
+
+	<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse"
+					data-target=".navbar-collapse">
+					<span class="icon-bar">s</span> <span class="icon-bar">sa</span> <span
+						class="icon-bar">asd</span>
+				</button>
+				<a class="navbar-brand" href="#home">Mehmet Efendi</a>
+			</div>
+			<div class="collapse navbar-collapse navbar-collapse" id="myNavbar">
+				<ul class="nav navbar-nav pull-right">
+					<li>
+						<a href="#home" class="list-group-item"
+							ng-class="{active: currentNavLink == '/home'}"
+							data-toggle="collapse"	data-target=".navbar-collapse"> 
+								<i class="fa fa-home fa-lg"></i>&nbsp;Home
+						</a>
+					</li>
+					<li>
+						<a href="#beverages" class="list-group-item"
+						ng-class="{active: currentNavLink == '/beverages'}"
+						data-toggle="collapse" data-target=".navbar-collapse"> 
+							<i class="fa fa-coffee fa-lg"></i>&nbsp;Beverages
+					</a>
+					</li>
+					<li>
+						<a href="#blends" class="list-group-item"
+							ng-class="{active: currentNavLink == '/blends'}"
+							data-toggle="collapse" data-target=".navbar-collapse"> 
+							<i class="fa fa-plus-square fa-lg"></i>&nbsp;Blends
+						</a>
+					</li>
+					<li>
+						<a href="#orders" class="list-group-item"
+							ng-class="{active: currentNavLink == '/orders'}"
+							data-toggle="collapse" data-target=".navbar-collapse"> 
+							<i class="fa fa-rocket fa-lg"></i>&nbsp;Orders
+						</a>	
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<div style="padding: 0 15px;">
+		<div class="container-fluid">
+
+			<div class="row">
+				<div class="col-md-3 sidebar">
+
+					<div class="list-group">
+						<a href="#home" class="list-group-item"
+							ng-class="{active: currentNavLink == '/home'}"> <i
+							class="fa fa-home fa-lg"></i>&nbsp;Home
+						</a>
+						 <a href="#beverages" class="list-group-item"
+							ng-class="{active: currentNavLink == '/beverages'}"> <i
+							class="fa fa-coffee fa-lg"></i>&nbsp;Beverages
+						</a> 
+						<a href="#blends" class="list-group-item"
+							ng-class="{active: currentNavLink == '/blends'}"> <i
+							class="fa fa-plus-square fa-lg"></i>&nbsp;Blends
+						</a>
+						<a href="#orders" class="list-group-item"
+							ng-class="{active: currentNavLink == '/orders'}"> <i
+							class="fa fa-rocket fa-lg"></i>&nbsp;Orders
+						</a>
+
+					</div>
+
+				</div>
+
+				<div class="col-md-9 col-md-offset-3">
+					<div ui-view></div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>

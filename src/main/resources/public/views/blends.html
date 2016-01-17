@@ -1,0 +1,17 @@
+<br/>
+<table class="table table-striped table-bordered table-hover">
+	<thead>
+		<tr>
+			<th>Name</th>
+			<th>Price</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr ng-repeat="blend in blends">
+			<td>{{blend.name}}</td>
+			<td><button ng-click="locale.addBlend(blend)">Order</button></td>
+		</tr>
+	</tbody>
+</table>
+<br/>
+<div>

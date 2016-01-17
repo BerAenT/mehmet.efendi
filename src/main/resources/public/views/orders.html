@@ -1,0 +1,28 @@
+<br/>
+<table class="table table-striped table-bordered table-hover">
+	<thead>
+		<tr>
+			<th>Beverage Name</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr ng-repeat="beverage in locale.order.beverageDtoList">
+			<td>{{beverage.name}}</td>
+		</tr>
+	</tbody>
+</table>
+
+<br/>
+<table class="table table-striped table-bordered table-hover">
+	<thead>
+		<tr>
+			<th>Blend Name</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr ng-repeat="blend in order.blendDtoList">
+			<td>{{blend.name}}</td>
+		</tr>
+	</tbody>
+</table>
+<button ng-click="locale.order()">Order</button>

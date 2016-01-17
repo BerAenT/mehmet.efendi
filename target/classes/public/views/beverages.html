@@ -1,0 +1,17 @@
+<br/>
+	<table class="table table-striped table-bordered table-hover">
+		<thead>
+			<tr>
+				<th>Name</th>
+				<th>Price</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="beverage in beverages">
+				<td>{{beverage.name}}</td>
+				<td>
+					<button onClick="saveBeverage(beverage)">Order</button>
+				</td>
+			</tr>
+		</tbody>
+	</table>
