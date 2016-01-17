@@ -12,20 +12,19 @@ myApp.controller('DenemeController', [ '$scope', '$http',  function($scope) {
 });
 
 
-myApp.controller('BeverageController', [ '$scope', '$http',
-		function($scope, $http) {
-
-			$http.get('beverage/list').success(function(data) {
-				$scope.beverages = data;
-			}).error(function(data) {
-				alert('error');
-			});
-		} ,
-		saveBeverage:function (beverage) {
+myApp.controller('BeverageController', [ '$scope', '$http', function ($scope, $http) {
+	$http.get('beverage/list').success(function(data) {
+		$scope.beverages = data;
+	}).error(function(data) {
+		alert('error');
+	});
+	
+	$scope.saveBeverage:function (beverage) {
 			alert(beverage)
 			console.log(beverage);
-        }
-]);
+	}
+}]);
+
 
 myApp.controller('BlendController', [ '$scope', '$http', function ($scope, $http) {
 	$http.get('blend/list')
